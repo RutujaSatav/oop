@@ -1,0 +1,85 @@
+interface vehical{
+    public void changegear();
+
+    public void ApplyBreak ();
+
+    public void Speedup();
+
+}
+class Car implements vehical
+{
+
+    public void changegear()
+    {   System.out.println("1).Car");
+        System.out.println("change the gear of car");
+    }
+    public void ApplyBreak()
+    {
+        System.out.println("Apply break on car");
+    }
+    public void Speedup()
+    {
+        System.out.println("speedup the car");
+    }
+}
+class Bike implements vehical
+{
+
+    public void changegear()
+    {   System.out.println("2).Bike");
+        System.out.println("change the gear of Bike");
+    }
+    public void ApplyBreak()
+    {
+        System.out.println("Apply break on Bike");
+    }
+    public void Speedup()
+    {
+        System.out.println("speedup the Bike");
+    }
+}
+class Bicycle implements vehical
+{
+
+    public void changegear()
+    {   System.out.println("3).Bicycle");
+        System.out.println("change the gear of Bicycle");
+    }
+    public void ApplyBreak()
+    {
+        System.out.println("Apply break on Bicycle");
+    }
+    public void Speedup()
+    {
+        System.out.println("speedup the Bicycle");
+    }
+}
+public class Rutu
+{
+    public static void main(String[]args)
+    {
+        vehical v;
+        v=new Car();
+        v.changegear();
+        v.Speedup();
+        v.ApplyBreak();
+        System.out.println();
+        v=new Bike();
+        v.changegear();
+        v.Speedup();
+        v.ApplyBreak();
+        System.out.println();
+
+        v=new Bicycle();
+        v.changegear();
+        v.Speedup();
+        v.ApplyBreak();
+        System.out.println();
+
+
+    }
+}
+
+
+
+

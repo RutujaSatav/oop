@@ -1,0 +1,70 @@
+
+package practical;
+
+import java.util.Scanner;
+
+public class ComplexNumber {
+
+    public static void main(String[] args) {
+
+        int r, i;
+
+        Complex comp = new Complex();
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Enter the real part of first complex number :");
+        r = sc.nextInt();
+        System.out.println("Enter the imaginary part of first complex number :");  	 	i = sc.nextInt();
+
+        Complex c1 = new Complex(r, i);
+        System.out.println("Enter the real part of second complex number :");   r = sc.nextInt();
+        System.out.println("Enter the imaginary part of second complex number :");   i = sc.nextInt();
+
+        Complex c2 = new Complex(r, i);
+
+        comp.add(c1, c2);  	 	comp.substraction(c1, c2);  	 	comp.multiplication(c1, c2);
+        comp.division(c1, c2);
+    }
+}
+
+class Complex {  int real, imaginary;
+
+    public Complex() {   this.real = 0;
+        this.imaginary = 0;
+    }
+    public Complex(int r, int i) {
+        this.real = r;
+        this.imaginary = i;
+    }
+
+    public void display(Complex c1, Complex c2) {
+        System.out.println("Print first number = (" + c1.real + " + " + c1.imaginary + ") i");  	 	System.out.println("Print Second number = (" + c2.real + " + " + c2.imaginary + ") i");
+    }
+    public void add(Complex c1, Complex c2) {  	 	real = c1.real + c2.real;
+        imaginary = c1.imaginary + c2.imaginary;
+        System.out.println("Addition of two complex number is : (" + real + " + " + imaginary + "i )");
+    }
+    public void substraction(Complex c1, Complex c2) {  	 	real = c1.real - c2.real;
+        imaginary = c1.imaginary - c2.imaginary;
+        System.out.println("Substraction of two complex number is : (" + real + " + " + imaginary + "i )");
+    }
+    public void multiplication(Complex c1, Complex c2) {  	 	real = c1.real * c2.real;
+        imaginary = c1.imaginary * c2.imaginary;
+        System.out.println("Multiplication of two complex number is : (" + real + " + " + imaginary +
+                "i )");
+    }
+    public void division(Complex c1, Complex c2) {  	 	real = c1.real / c2.real;
+        imaginary = c1.imaginary / c2.imaginary;
+        System.out.println("Division of two complex number is : (" + real +                      " + " + imaginary +
+                "i )");
+    }
+}
+
+
+
+
+
+
+
+
+

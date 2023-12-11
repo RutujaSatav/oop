@@ -1,0 +1,45 @@
+import java.util.Scanner;
+
+abstract class Shape {
+    double l, h;
+
+    void input() {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the length");
+        l = sc.nextDouble();
+        System.out.println("Enter the height");
+        h = sc.nextDouble();
+    }
+
+    abstract void computeArea();
+}
+
+class Triangle extends Shape {
+    void computeArea() {
+        double area;
+        area = 0.5 * l * h;
+        System.out.println("Area of triangle is:" + area);
+    }
+}
+
+class Rectangle extends Shape {
+    void computeArea() {
+        double area;
+        area = l * h;
+        System.out.println("Area of Rectangle is:" + area);
+    }
+}
+
+public class DynamicBinding {
+    public static void main(String[] args) {
+        Shape s;
+        Triangle t = new Triangle();
+        Rectangle r = new Rectangle();
+        s = t;
+        s.input();
+        s.computeArea();
+        s = r;
+        s.input();
+        s.computeArea();
+    }
+}

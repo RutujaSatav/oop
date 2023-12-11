@@ -1,0 +1,59 @@
+class Employee {
+    String name, address, mail;
+    float id, mobile, basic;
+
+    void salary() {
+        float da, hra, pf, cf, gross;
+        da = basic * 97 / 100;
+        hra = basic * 10 / 100;
+        pf = basic * 12 / 100;
+        cf = basic * 0.1f / 100;
+        gross = (basic + da + hra);
+        float var = (gross - pf + cf);
+        System.out.println("Name" + name);
+        System.out.println(" Basic salary" + basic);
+        System.out.println("Gross salary" + gross);
+        System.out.println("Net salary" + var);
+    }
+}
+
+class Programmer extends Employee {
+    Programmer(String name, int sal) {
+        this.name = name;
+        basic = sal;
+    }
+}
+
+class Teamlead extends Employee {
+    Teamlead(String name, int sal) {
+        this.name = name;
+        basic = sal;
+    }
+}
+
+class Projectmanager extends Employee {
+    Projectmanager(String name, int sal) {
+        this.name = name;
+        basic = sal;
+    }
+}
+
+class APM extends Employee {
+    APM(String name, int sal) {
+        this.name = name;
+        basic = sal;
+    }
+}
+
+public class Inheritence {
+    public static void main(String args[]) {
+        Programmer a = new Programmer("Shruti", 20000);
+        a.salary();
+        Teamlead b = new Teamlead("Puja", 15000);
+        b.salary();
+        Projectmanager c = new Projectmanager("Tina", 12000);
+        c.salary();
+        APM d = new APM("Rita", 10000);
+        d.salary();
+    }
+}
